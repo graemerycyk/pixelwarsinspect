@@ -1,0 +1,35 @@
+[project]
+name = "pixel-wars-inspect"
+version = "0.2.0"
+description = "Pixel Wars: a contamination-proof, replay-verified long-horizon game eval for Inspect."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Graeme Rycyk" }]
+keywords = ["inspect", "evals", "llm", "benchmark", "games", "agents"]
+# Floor = the oldest release actually tested (SampleScore / list[SampleScore] Metric API).
+dependencies = ["inspect_ai>=0.3.244"]
+
+[project.urls]
+Homepage = "https://pixelwars.ai"
+Repository = "https://github.com/graemerycyk/pixelwarsinspect"
+Benchmark = "https://pixelwars.ai/benchmark"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+# Registers the task with Inspect so `inspect eval pixel_wars` resolves after pip install
+# (path-based `inspect eval src/pixel_wars/pixel_wars.py` also keeps working).
+[project.entry-points.inspect_ai]
+pixel_wars = "pixel_wars._registry"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pixel_wars"]
+
+# The bundled Node referee ships inside the package (loaded at runtime next to referee_client.py).
+[tool.hatch.build.targets.wheel.force-include]
+"src/pixel_wars/referee.mjs" = "pixel_wars/referee.mjs"

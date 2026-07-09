@@ -1,3 +1,11 @@
+/*!
+ * pixel-wars-inspect referee bundle — the Pixel Wars rules core + Commander anchor.
+ * Licensed under the PolyForm Shield License 1.0.0 (see LICENSE-BUNDLE.md in this
+ * repository): use it for anything, commercial included, except providing a product
+ * that competes with Pixel Wars. The Python wrapper is separately MIT-licensed.
+ * Required Notice: Copyright (c) 2026 Graeme Rycyk — Pixel Wars (https://pixelwars.ai)
+ */
+
 // server/src/referee-cli.ts
 import { createInterface } from "node:readline";
 

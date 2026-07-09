@@ -70,3 +70,6 @@ upstream in the bundled engine.
 ## License
 
 By contributing, you agree that your contributions are licensed under the [MIT License](./LICENSE).
+Contributions apply to the Python wrapper and tests only — `src/pixel_wars/referee.mjs` is a
+compiled artifact generated upstream and licensed separately under
+[PolyForm Shield 1.0.0](./LICENSE-BUNDLE.md), so PRs that modify it directly can't be accepted.

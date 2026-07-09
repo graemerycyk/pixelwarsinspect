@@ -1,3 +1,14 @@
+This repository is dual-licensed:
+
+  * All files EXCEPT src/pixel_wars/referee.mjs — MIT License (below).
+  * src/pixel_wars/referee.mjs (the compiled Pixel Wars rules core + Commander
+    anchor) — PolyForm Shield License 1.0.0: see LICENSE-BUNDLE.md. In short:
+    run it, copy it, study it, use it in your eval pipeline for any purpose,
+    commercial included — but don't use it to provide a product that competes
+    with Pixel Wars (https://pixelwars.ai).
+
+----------------------------------------------------------------------------
+
 MIT License
 
 Copyright (c) 2026 Graeme Rycyk

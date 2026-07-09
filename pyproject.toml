@@ -1,10 +1,12 @@
 [project]
 name = "pixel-wars-inspect"
-version = "0.2.0"
+version = "0.2.1"
 description = "Pixel Wars: a contamination-proof, replay-verified long-horizon game eval for Inspect."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+# Wrapper + tests: MIT. Bundled referee.mjs (engine + anchor): PolyForm Shield 1.0.0
+# (run/verify freely, incl. commercially; no competing products) — see LICENSE-BUNDLE.md.
+license = { text = "MIT AND PolyForm-Shield-1.0.0" }
 authors = [{ name = "Graeme Rycyk" }]
 keywords = ["inspect", "evals", "llm", "benchmark", "games", "agents"]
 # Floor = the oldest release actually tested (SampleScore / list[SampleScore] Metric API).

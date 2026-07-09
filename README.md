@@ -85,3 +85,15 @@ hand-edited in this repo — see [CONTRIBUTING.md](./CONTRIBUTING.md).
   long games aren't truncated mid-match.
 - **Inspect Evals Register.** This repo is the standalone source for the eval; a Register submission
   points at a pinned commit here plus the arXiv methodology paper (in preparation).
+
+## License
+
+Dual-licensed, deliberately:
+
+- **The Python wrapper, tests, and docs — [MIT](./LICENSE).** Standard open eval code; use it
+  however you like.
+- **`src/pixel_wars/referee.mjs` (the compiled rules core + Commander anchor) —
+  [PolyForm Shield 1.0.0](./LICENSE-BUNDLE.md).** Run it, study it, and use it in your eval
+  pipeline for any purpose, commercial included; the one thing the license withholds is providing
+  a product that competes with Pixel Wars. This keeps every published number reproducible by
+  anyone while the engine remains Pixel Wars' own.

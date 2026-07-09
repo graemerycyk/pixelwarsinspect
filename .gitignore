@@ -1,6 +1,16 @@
-.venv/
+# Python bytecode / build
 __pycache__/
+*.py[cod]
 *.egg-info/
+build/
+dist/
 .pytest_cache/
-*.eval
+
+# Local virtualenvs
+.venv/
+venv/
+env/
+
+# Inspect eval run logs
 logs/
+*.eval

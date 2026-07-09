@@ -97,3 +97,18 @@ Dual-licensed, deliberately:
   pipeline for any purpose, commercial included; the one thing the license withholds is providing
   a product that competes with Pixel Wars. This keeps every published number reproducible by
   anyone while the engine remains Pixel Wars' own.
+
+## What is `referee.mjs`?
+
+The deterministic game engine — rules core + the Commander anchor — compiled to a single
+unminified, readable ES module with esbuild from the upstream Pixel Wars engine (the build
+command ships in the upstream repo's publishing runbook, and the banner at the top of the file
+records the license and version). Properties a reviewer can check directly:
+
+- **No network access.** It speaks JSON-lines over stdio with `referee_client.py` and nothing
+  else; there are no imports beyond Node built-ins (`node:readline`, `node:crypto`).
+- **Deterministic.** A game is fully determined by `(theme, complexity, seed)` + the action log;
+  the task replay-verifies every game before scoring it (`verified_rate` metric).
+- **Licensed for use, not for competition.** PolyForm Shield 1.0.0 (see
+  [LICENSE-BUNDLE.md](./LICENSE-BUNDLE.md)) — run it for anything, including commercial eval
+  pipelines; just don't ship a competing product with it.
